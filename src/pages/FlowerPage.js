@@ -60,7 +60,7 @@ const FlowerPage = () => {
                                        style={{maxWidth: '3rem'}}
                                        onChange={quantityChangeHandler}
                                 />
-                                <button className="btn btn-outline-dark flex-shrink-0"
+                                <button className="btn btn-primary flex-shrink-0"
                                         type="button"
                                         onClick={addToCartHandler}
                                 >

@@ -2,11 +2,33 @@ import React from 'react';
 
 const Main = props => {
     return (
-        <section className="py-5">
-            <div className="container px-4 px-lg-5 mt-5">
-                <h1>HEre will be description of this store</h1>
-            </div>
-        </section>
+        <>
+            <header className="bg-primary py-5">
+                <div className="container px-4 px-lg-5 my-5">
+                    <div className="text-center text-white">
+                        <h1 className="display-4 fw-bolder">Ольгин сад гортензий</h1>
+                        <p className="lead fw-normal text-white-50 mb-0">
+                            Выращенная своими руками красота и удовольствие для взора.
+                        </p>
+                    </div>
+                </div>
+            </header>
+            <section className="py-5">
+                <div className="container px-4 px-lg-5 mt-5">
+                    <h3>Частная компания, открытая в 2018 году. Занимается размножением гортензий и других цветов.
+                        Для здорового содержания растений в питомнике применяются новейшие технологии. Чтобы цветы были
+                        здоровые и красивые, производится своевременная обрезка,
+                    </h3>
+                    <h3>
+                        В «Ольгином саду гортензий» предлагается широкий ассортимент продукции: одних только гортензий — более 50 видов!
+                        Также можно приобрести посадочный материал разных размеров. В питомнике есть как маленькие цветы, так и взрослые растения.
+                    </h3>
+                    <h3>
+                        Все растения имеют компактную корневую систему и отличную приживаемость.
+                    </h3>
+                </div>
+            </section>
+        </>
     );
 };
 

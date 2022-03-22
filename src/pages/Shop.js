@@ -15,11 +15,25 @@ const Shop = observer(() => {
     }, [])
 
     return (
-        <section className="py-5">
-            <div className="container px-4 px-lg-5 mt-5">
-                <FlowersList/>
-            </div>
-        </section>
+        <>
+            <header className="bg-primary py-5">
+                <div className="container px-4 px-lg-5 my-5">
+                    <div className="text-center text-white">
+                        <h1 className="display-4 fw-bolder">Наши гортензии</h1>
+                        <p className="lead fw-normal text-white-50 mb-0">
+                            Здесь Вы можете посмотреть, выбрать и купить растения которые Вам понравятся.
+                            Наслаждайтесь их красотой и преобретайте!
+                            Не стестяйтесь!
+                        </p>
+                    </div>
+                </div>
+            </header>
+            <section className="py-5">
+                <div className="container px-4 px-lg-5 mt-5">
+                    <FlowersList/>
+                </div>
+            </section>
+        </>
     );
 });
 

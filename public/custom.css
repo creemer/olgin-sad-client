@@ -1,0 +1,18 @@
+:root {
+    --bs-primary-rgb: 86, 61, 124;
+}
+
+.btn-primary {
+    background-color: #563d7c;
+    border-color: #563d7c;
+}
+
+.btn-primary:hover {
+    background-color: #675a92;
+    border-color: #675a92;
+}
+
+.btn-primary:focus {
+    background-color: #675a92;
+    border-color: #675a92;
+}

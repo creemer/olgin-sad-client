@@ -46,7 +46,7 @@ const NavBar = observer(() => {
                     <button className="btn btn-outline-dark" onClick={() => history.push(BASKET_ROUTE)}>
                         <i className="bi-cart-fill me-1"></i>
                         Корзина
-                        <span className="badge bg-dark text-white ms-1 rounded-pill">{basket.totalQuantity}</span>
+                        <span className="badge bg-primary text-white ms-1 rounded-pill">{basket.totalQuantity}</span>
                     </button>
                 </div>
             </div>

@@ -33,7 +33,7 @@ const FlowerItem = ({flower}) => {
                 {/*Product actions*/}
                 <div className="card-footer p-4 pt-0 border-top-0 bg-transparent">
                     <div className="text-center">
-                        <a className="btn btn-outline-dark mt-auto"
+                        <a className="btn btn-primary mt-auto"
                            href="#"
                            onClick={() => history.push(FLOWER_ROUTE + '/' + flower.id)}
                         >
