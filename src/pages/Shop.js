@@ -22,7 +22,11 @@ const Shop = observer(() => {
                         <h1 className="display-4 fw-bolder">Наши гортензии</h1>
                         <p className="lead fw-normal text-white-50 mb-0">
                             Здесь Вы можете посмотреть, выбрать и купить растения которые Вам понравятся.
+                        </p>
+                        <p className="lead fw-normal text-white-50 mb-0">
                             Наслаждайтесь их красотой и преобретайте!
+                        </p>
+                        <p className="lead fw-normal text-white-50 mb-0">
                             Не стестяйтесь!
                         </p>
                     </div>

@@ -1,5 +1,6 @@
 import Admin from "./pages/Admin";
 import {
+    ABOUT_ROUTE,
     ADMIN_ROUTE,
     BASKET_ROUTE,
     FLOWER_ROUTE,
@@ -24,11 +25,11 @@ export const authRoutes = [
 export const publicRoutes = [
     {
         path: ROOT_ROUTE,
-        Component: Main
+        Component: Shop
     },
     {
-        path: SHOP_ROUTE,
-        Component: Shop
+        path: ABOUT_ROUTE,
+        Component: Main
     },
     {
         path: BASKET_ROUTE,

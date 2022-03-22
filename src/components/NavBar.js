@@ -2,7 +2,7 @@ import React, {useContext} from 'react';
 import {Context} from "../index";
 import Nav from "react-bootstrap/Nav";
 import {NavLink} from "react-router-dom";
-import {ADMIN_ROUTE, BASKET_ROUTE, ROOT_ROUTE, SHOP_ROUTE} from "../utils/consts";
+import {ABOUT_ROUTE, ADMIN_ROUTE, BASKET_ROUTE, SHOP_ROUTE} from "../utils/consts";
 import {observer} from "mobx-react-lite";
 import {useHistory} from 'react-router-dom'
 const NavBar = observer(() => {
@@ -25,7 +25,7 @@ const NavBar = observer(() => {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li className="nav-item">
-                            <Nav.Link onClick={() => history.push(ROOT_ROUTE)} >Главная</Nav.Link>
+                            <Nav.Link onClick={() => history.push(ABOUT_ROUTE)} >О нас</Nav.Link>
                         </li>
                         <li className="nav-item">
                             <Nav.Link onClick={() => history.push(SHOP_ROUTE)}>Каталог</Nav.Link>
