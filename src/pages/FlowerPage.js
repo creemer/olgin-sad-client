@@ -5,6 +5,7 @@ import {Context} from '../index';
 
 const FlowerPage = () => {
     const {basket} = useContext(Context);
+    const [addedToBasket, setAddedToBasket] = useState(false)
     const [flower, setFlower] = useState({})
     const [quantity, setQuantity] = useState(1);
     const {id} = useParams()
@@ -22,6 +23,10 @@ const FlowerPage = () => {
             quantity: Number(quantity),
             ...flower
         })
+
+        setAddedToBasket(true);
+
+        setTimeout(() => setAddedToBasket(false), 5000);
     }
 
     return (
@@ -62,6 +67,15 @@ const FlowerPage = () => {
                                     <i className="bi-cart-fill me-1"></i>
                                     Добавить в корзину
                                 </button>
+                            </div>
+                            <div className="py-5 text-center mh-100">
+                                { addedToBasket ?
+                                    <div className="alert alert-success" role="alert">
+                                        Товар добавлен в корзину.
+                                    </div>
+                                    :
+                                    null
+                                }
                             </div>
                         </div>
                     </div>

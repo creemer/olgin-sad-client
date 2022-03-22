@@ -61,7 +61,7 @@ const Basket = () => {
                         :
                         null
                     }
-            </div>
+                </div>
 
                 <div className="row g-5">
                 <div className="col-md-5 col-lg-4 order-md-last">
