@@ -10,7 +10,7 @@ const FlowerItem = ({flower}) => {
             <div className="card h-100">
                 {/*Sale badge*/}
                 { flower.sale ?
-                    <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                    <div className="badge bg-dark text-white position-absolute" style={{top: "0.5rem", right: "0.5rem"}}>Sale</div>
                     :
                     null
                 }
