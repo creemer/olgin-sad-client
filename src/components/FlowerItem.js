@@ -15,7 +15,7 @@ const FlowerItem = ({flower}) => {
                     null
                 }
                 {/*Product Image*/}
-                <img className="card-img-top" src={process.env.REACT_APP_API_URL + flower.img} alt="flower"/>
+                <img className="card-img-top" src={flower.img} alt="flower"/>
                 {/*Product details*/}
                 <div className="card-body p-4">
                     <div className="text-center">

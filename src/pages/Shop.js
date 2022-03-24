@@ -1,4 +1,5 @@
-import React, {useContext, useEffect} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
+import classNames from 'classnames';
 import FlowersList from "../components/FlowersList";
 import {observer} from "mobx-react-lite";
 import {Context} from "../index";
@@ -6,6 +7,7 @@ import {fetchFlowers} from "../http/flowerAPI";
 
 const Shop = observer(() => {
     const {flower} = useContext(Context)
+    const [activeTab, setActiveTab] = useState('all')
 
     useEffect(() => {
         fetchFlowers().then(data => {
@@ -33,6 +35,30 @@ const Shop = observer(() => {
                 </div>
             </header>
             <section className="py-5">
+                <div className="container px-4 px-lg-5 justify-content-center d-flex">
+                    <ul className="nav nav-tabs">
+                        <li className="nav-item" style={{cursor: "pointer"}} onClick={() => setActiveTab('all')}>
+                            <p className={classNames("nav-link", activeTab === 'all' ? 'active': '')}>
+                                Все
+                            </p>
+                        </li>
+                        <li className="nav-item" style={{cursor: "pointer"}} onClick={() => setActiveTab('metel')}>
+                            <p className={classNames("nav-link", activeTab === 'metel' ? 'active': '')}>
+                                Метельчатые
+                            </p>
+                        </li>
+                        <li className="nav-item" style={{cursor: "pointer"}} onClick={() => setActiveTab('bigList')}>
+                            <p className={classNames("nav-link", activeTab === 'bigList' ? 'active': '')}>
+                                Крепнолистные
+                            </p>
+                        </li>
+                        <li className="nav-item" style={{cursor: "pointer"}} onClick={() => setActiveTab('other')}>
+                            <p className={classNames("nav-link", activeTab === 'other' ? 'active': '')}>
+                                Развесистые
+                            </p>
+                        </li>
+                    </ul>
+                </div>
                 <div className="container px-4 px-lg-5 mt-5">
                     <FlowersList/>
                 </div>
