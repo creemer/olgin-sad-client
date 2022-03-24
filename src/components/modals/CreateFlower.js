@@ -60,7 +60,9 @@ const CreateFlower = observer(({show, onHide}) => {
                     </Form.Group>
                     <Form.Group controlId="form.flowerCategory">
                         <Form.Label>Категория цветка</Form.Label>
-                        <Form.Select
+                        <Form.Control
+                            as="select"
+                            defaultValue="all"
                             value={category}
                             onChange={e => setCategory(e.target.value)}
                             className="mt-3"
@@ -69,7 +71,7 @@ const CreateFlower = observer(({show, onHide}) => {
                             <option value={FLOWER_CATEGORIES.metel}>Метельчатые</option>
                             <option value={FLOWER_CATEGORIES.krupnoList}>Крупнолистные</option>
                             <option value={FLOWER_CATEGORIES.other}>Другие</option>
-                        </Form.Select>
+                        </Form.Control>
                     </Form.Group>
                     <Form.Group controlId="form.flowerDescription">
                         <Form.Label>Описание цветка</Form.Label>
