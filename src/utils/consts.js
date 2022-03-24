@@ -6,6 +6,7 @@ export const ROOT_ROUTE = '/'
 export const SHOP_ROUTE = ROOT_ROUTE
 export const BASKET_ROUTE = '/basket'
 export const FLOWER_ROUTE = '/flower'
+export const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/'
 
 export const FLOWER_CATEGORIES = {
     metel: 'metel',
