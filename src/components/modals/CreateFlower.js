@@ -68,9 +68,9 @@ const CreateFlower = observer(({show, onHide}) => {
                             className="mt-3"
                             placeholder="Выберети категорию"
                         >
-                            <option value={FLOWER_CATEGORIES.metel}>Метельчатые</option>
-                            <option value={FLOWER_CATEGORIES.krupnoList}>Крупнолистные</option>
-                            <option value={FLOWER_CATEGORIES.other}>Другие</option>
+                            <option value={FLOWER_CATEGORIES.metel.key}>{FLOWER_CATEGORIES.metel.readable}</option>
+                            <option value={FLOWER_CATEGORIES.krupnoList.key}>{FLOWER_CATEGORIES.krupnoList.readable}</option>
+                            <option value={FLOWER_CATEGORIES.tree.key}>{FLOWER_CATEGORIES.tree.readable}</option>
                         </Form.Control>
                     </Form.Group>
                     <Form.Group controlId="form.flowerDescription">

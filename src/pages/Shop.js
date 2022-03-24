@@ -17,6 +17,24 @@ const Shop = observer(() => {
         })
     }, [activeTab])
 
+    const getCategories = () => {
+        const categories = [
+            {
+                key: 'all',
+                readable: 'Все'
+            },
+            ...Object.values(FLOWER_CATEGORIES)
+        ];
+
+        return categories.map(category => (
+            <li className="nav-item" style={{cursor: "pointer"}} onClick={() => setActiveTab(category.key)}>
+                <p className={classNames("nav-link", activeTab === category.key ? 'active': '')}>
+                    {category.readable}
+                </p>
+            </li>
+        ))
+    }
+
     return (
         <>
             <header className="bg-primary py-5">
@@ -38,26 +56,7 @@ const Shop = observer(() => {
             <section className="py-5">
                 <div className="container px-4 px-lg-5 justify-content-center d-flex">
                     <ul className="nav nav-tabs">
-                        <li className="nav-item" style={{cursor: "pointer"}} onClick={() => setActiveTab('all')}>
-                            <p className={classNames("nav-link", activeTab === 'all' ? 'active': '')}>
-                                Все
-                            </p>
-                        </li>
-                        <li className="nav-item" style={{cursor: "pointer"}} onClick={() => setActiveTab(FLOWER_CATEGORIES.metel)}>
-                            <p className={classNames("nav-link", activeTab === FLOWER_CATEGORIES.metel ? 'active': '')}>
-                                Метельчатые
-                            </p>
-                        </li>
-                        <li className="nav-item" style={{cursor: "pointer"}} onClick={() => setActiveTab(FLOWER_CATEGORIES.krupnoList)}>
-                            <p className={classNames("nav-link", activeTab === FLOWER_CATEGORIES.krupnoList ? 'active': '')}>
-                                Крепнолистные
-                            </p>
-                        </li>
-                        <li className="nav-item" style={{cursor: "pointer"}} onClick={() => setActiveTab(FLOWER_CATEGORIES.other)}>
-                            <p className={classNames("nav-link", activeTab === FLOWER_CATEGORIES.other ? 'active': '')}>
-                                Развесистые
-                            </p>
-                        </li>
+                        { getCategories() }
                     </ul>
                 </div>
                 <div className="container px-4 px-lg-5 mt-5">
