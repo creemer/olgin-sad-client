@@ -36,7 +36,7 @@ const FlowerPage = () => {
                     <div className="row gx-4 gx-lg-5 align-items-center">
                         <div className="col-md-6">
                             <img className="card-img-top mb-5 mb-md-0"
-                                 src={process.env.REACT_APP_API_URL + flower.img}
+                                 src={flower.img}
                                  alt="..."
                             />
                         </div>
