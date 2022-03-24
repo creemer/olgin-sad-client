@@ -4,6 +4,7 @@ import FlowersList from "../components/FlowersList";
 import {observer} from "mobx-react-lite";
 import {Context} from "../index";
 import {fetchFlowers} from "../http/flowerAPI";
+import {FLOWER_CATEGORIES} from '../utils/consts';
 
 const Shop = observer(() => {
     const {flower} = useContext(Context)
@@ -42,18 +43,18 @@ const Shop = observer(() => {
                                 Все
                             </p>
                         </li>
-                        <li className="nav-item" style={{cursor: "pointer"}} onClick={() => setActiveTab('metel')}>
-                            <p className={classNames("nav-link", activeTab === 'metel' ? 'active': '')}>
+                        <li className="nav-item" style={{cursor: "pointer"}} onClick={() => setActiveTab(FLOWER_CATEGORIES.metel)}>
+                            <p className={classNames("nav-link", activeTab === FLOWER_CATEGORIES.metel ? 'active': '')}>
                                 Метельчатые
                             </p>
                         </li>
-                        <li className="nav-item" style={{cursor: "pointer"}} onClick={() => setActiveTab('bigList')}>
-                            <p className={classNames("nav-link", activeTab === 'bigList' ? 'active': '')}>
+                        <li className="nav-item" style={{cursor: "pointer"}} onClick={() => setActiveTab(FLOWER_CATEGORIES.krupnoList)}>
+                            <p className={classNames("nav-link", activeTab === FLOWER_CATEGORIES.krupnoList ? 'active': '')}>
                                 Крепнолистные
                             </p>
                         </li>
-                        <li className="nav-item" style={{cursor: "pointer"}} onClick={() => setActiveTab('other')}>
-                            <p className={classNames("nav-link", activeTab === 'other' ? 'active': '')}>
+                        <li className="nav-item" style={{cursor: "pointer"}} onClick={() => setActiveTab(FLOWER_CATEGORIES.other)}>
+                            <p className={classNames("nav-link", activeTab === FLOWER_CATEGORIES.other ? 'active': '')}>
                                 Развесистые
                             </p>
                         </li>

@@ -3,12 +3,14 @@ import Modal from "react-bootstrap/Modal";
 import {Button, Form} from "react-bootstrap";
 import {createFlower} from "../../http/flowerAPI";
 import {observer} from "mobx-react-lite";
+import {FLOWER_CATEGORIES} from '../../utils/consts';
 
 const CreateFlower = observer(({show, onHide}) => {
     const [name, setName] = useState('')
     const [description, setDescription] = useState('')
     const [price, setPrice] = useState(0)
     const [file, setFile] = useState(null)
+    const [category, setCategory] = useState('')
 
     const selectFile = e => {
         setFile(e.target.files[0])
@@ -19,6 +21,7 @@ const CreateFlower = observer(({show, onHide}) => {
         formData.append('name', name)
         formData.append('price', `${price}`)
         formData.append('description', description)
+        formData.append('category', category)
         formData.append('img', file)
         createFlower(formData).then(data => onHide())
     }
@@ -54,6 +57,19 @@ const CreateFlower = observer(({show, onHide}) => {
                             placeholder="Введите стоимость цветка"
                             type="number"
                         />
+                    </Form.Group>
+                    <Form.Group controlId="form.flowerCategory">
+                        <Form.Label>Категория цветка</Form.Label>
+                        <Form.Select
+                            value={category}
+                            onChange={e => setCategory(e.target.value)}
+                            className="mt-3"
+                            placeholder="Выберети категорию"
+                        >
+                            <option value={FLOWER_CATEGORIES.metel}>Метельчатые</option>
+                            <option value={FLOWER_CATEGORIES.krupnoList}>Крупнолистные</option>
+                            <option value={FLOWER_CATEGORIES.other}>Другие</option>
+                        </Form.Select>
                     </Form.Group>
                     <Form.Group controlId="form.flowerDescription">
                         <Form.Label>Описание цветка</Form.Label>

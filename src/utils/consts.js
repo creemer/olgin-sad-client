@@ -6,3 +6,9 @@ export const ROOT_ROUTE = '/'
 export const SHOP_ROUTE = ROOT_ROUTE
 export const BASKET_ROUTE = '/basket'
 export const FLOWER_ROUTE = '/flower'
+
+export const FLOWER_CATEGORIES = {
+    metel: 'metel',
+    krupnoList: 'bigList',
+    other: 'other'
+}
