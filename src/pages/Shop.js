@@ -11,11 +11,11 @@ const Shop = observer(() => {
     const [activeTab, setActiveTab] = useState('all')
 
     useEffect(() => {
-        fetchFlowers().then(data => {
+        fetchFlowers(activeTab).then(data => {
             flower.setFlowers(data);
             flower.setTotalCount(data.length);
         })
-    }, [])
+    }, [activeTab])
 
     return (
         <>

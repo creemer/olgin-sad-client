@@ -5,8 +5,8 @@ export const createFlower = async (flower) => {
     return data
 }
 
-export const fetchFlowers = async () => {
-    const {data} = await $host.get('api/flowers')
+export const fetchFlowers = async (category) => {
+    const {data} = await $host.get(`api/flowers?category=${category}`)
     return data
 }
 
